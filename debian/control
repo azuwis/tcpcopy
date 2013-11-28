@@ -1,0 +1,18 @@
+Source: tcpcopy
+Section: net
+Priority: extra
+Maintainer: Zhong Jianxin <azuwis@gmail.com>
+Build-Depends: debhelper (>= 8.0.0),
+               autoconf,
+               automake,
+               libtool
+Standards-Version: 3.9.3
+Homepage: http://code.google.com/p/tcpcopy/
+
+Package: tcpcopy
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: TCP stream replay tool
+ An online request replication tool, also a tcp stream replay tool, fit for
+ real testing, performance testing, stability testing, stress testing, load
+ testing, smoke testing, etc.
