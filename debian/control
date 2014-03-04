@@ -5,7 +5,8 @@ Maintainer: Zhong Jianxin <azuwis@gmail.com>
 Build-Depends: debhelper (>= 8.0.0),
                autoconf,
                automake,
-               libtool
+               libtool,
+               libpcap-dev
 Standards-Version: 3.9.3
 Homepage: http://code.google.com/p/tcpcopy/
 
