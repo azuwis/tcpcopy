@@ -1,3 +1,11 @@
+tcpcopy (0.9.7-1+netease1) unstable; urgency=low
+
+  * New upstream release
+  * debian/rules: Multiple binaries
+  * debian/control: Add libpcap-dev build-dep
+
+ -- Zhong Jianxin <azuwis@gmail.com>  Tue, 04 Mar 2014 17:06:14 +0800
+
 tcpcopy (0.9.6-1+netease1) unstable; urgency=low
 
   * Initial release
