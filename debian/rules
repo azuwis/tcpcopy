@@ -5,4 +5,30 @@
 
 override_dh_auto_configure:
 	./autogen.sh
-	dh_auto_configure --
+	dh_auto_configure
+
+override_dh_install:
+	dh_install
+	mv debian/tcpcopy/usr/bin/tcpcopy debian/tcpcopy/usr/bin/tcpcopy-trad
+	mv debian/tcpcopy/usr/bin/intercept debian/tcpcopy/usr/bin/intercept-trad
+
+	make clean
+	dh_auto_configure -- --enable-advanced
+	dh_auto_build
+	dh_auto_install
+	mv debian/tcpcopy/usr/bin/tcpcopy debian/tcpcopy/usr/bin/tcpcopy-adv
+	mv debian/tcpcopy/usr/bin/intercept debian/tcpcopy/usr/bin/intercept-adv
+
+	make clean
+	dh_auto_configure -- --enable-advanced --enable-pcap
+	dh_auto_build
+	dh_auto_install
+	mv debian/tcpcopy/usr/bin/tcpcopy debian/tcpcopy/usr/bin/tcpcopy-adv-pcap
+	mv debian/tcpcopy/usr/bin/intercept debian/tcpcopy/usr/bin/intercept-adv-pcap
+
+	make clean
+	dh_auto_configure -- --enable-advanced --enable-pcap --enable-dlinject
+	dh_auto_build
+	dh_auto_install
+	mv debian/tcpcopy/usr/bin/tcpcopy debian/tcpcopy/usr/bin/tcpcopy-adv-pcap-dl
+	mv debian/tcpcopy/usr/bin/intercept debian/tcpcopy/usr/bin/intercept-adv-pcap-dl
