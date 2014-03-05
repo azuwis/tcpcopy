@@ -16,3 +16,15 @@ Description: TCP stream replay tool
  An online request replication tool, also a tcp stream replay tool, fit for
  real testing, performance testing, stability testing, stress testing, load
  testing, smoke testing, etc.
+ .
+ This is NOT the Debian version. Binaries are compiled from different configure
+ options:
+ .
+ * tcpcopy-trad, intercept-trad
+     no addition options
+ * tcpcopy-adv, intercept-adv
+     --enable-advanced
+ * tcpcopy-adv-pcap, intercept-adv-pcap
+     --enable-advanced --enable-pcap
+ * tcpcopy-adv-pcap-dl, intercept-adv-pcap-dl
+     --enable-advanced --enable-pcap --enable-dlinject
