@@ -1,0 +1,16 @@
+README for Debian
+-----------------
+
+  This is NOT the Debian version. Binaries are compiled from different
+  configure options:
+
+  * tcpcopy-trad, intercept-trad
+      no addition options
+  * tcpcopy-adv, intercept-adv
+      --enable-advanced
+  * tcpcopy-adv-pcap, intercept-adv-pcap
+      --enable-advanced --enable-pcap
+  * tcpcopy-adv-pcap-dl, intercept-adv-pcap-dl
+      --enable-advanced --enable-pcap --enable-dlinject
+
+ -- Zhong Jianxin <azuwis@gmail.com>  Wed, 05 Mar 2014 14:46:13 +0800
