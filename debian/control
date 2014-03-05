@@ -6,7 +6,8 @@ Build-Depends: debhelper (>= 8.0.0),
                autoconf,
                automake,
                libtool,
-               libpcap-dev
+               libpcap-dev,
+               iptables-dev
 Standards-Version: 3.9.3
 Homepage: http://code.google.com/p/tcpcopy/
 
