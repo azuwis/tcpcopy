@@ -6,8 +6,12 @@ README for Debian
 
   * tcpcopy-trad, intercept-trad
       no addition options
+  * tcpcopy-trad-offline, intercept-trad-offline
+      --enable-offline
   * tcpcopy-adv, intercept-adv
       --enable-advanced
+  * tcpcopy-adv-offline, intercept-adv-offline
+      --enable-advanced --enable-offline
   * tcpcopy-adv-pcap, intercept-adv-pcap
       --enable-advanced --enable-pcap
   * tcpcopy-adv-pcap-dl, intercept-adv-pcap-dl

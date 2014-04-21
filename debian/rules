@@ -13,11 +13,25 @@ override_dh_install:
 	mv debian/tcpcopy/usr/bin/intercept debian/tcpcopy/usr/bin/intercept-trad
 
 	make clean
+	dh_auto_configure -- --enable-offline
+	dh_auto_build
+	dh_auto_install
+	mv debian/tcpcopy/usr/bin/tcpcopy debian/tcpcopy/usr/bin/tcpcopy-trad-offline
+	mv debian/tcpcopy/usr/bin/intercept debian/tcpcopy/usr/bin/intercept-trad-offline
+
+	make clean
 	dh_auto_configure -- --enable-advanced
 	dh_auto_build
 	dh_auto_install
 	mv debian/tcpcopy/usr/bin/tcpcopy debian/tcpcopy/usr/bin/tcpcopy-adv
 	mv debian/tcpcopy/usr/bin/intercept debian/tcpcopy/usr/bin/intercept-adv
+
+	make clean
+	dh_auto_configure -- --enable-advanced --enable-offline
+	dh_auto_build
+	dh_auto_install
+	mv debian/tcpcopy/usr/bin/tcpcopy debian/tcpcopy/usr/bin/tcpcopy-adv-offline
+	mv debian/tcpcopy/usr/bin/intercept debian/tcpcopy/usr/bin/intercept-adv-offline
 
 	make clean
 	dh_auto_configure -- --enable-advanced --enable-pcap
