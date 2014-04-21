@@ -1,3 +1,12 @@
+tcpcopy (0.9.7-1+netease2) unstable; urgency=low
+
+  * debian/control: Add iptables-dev to fix FTBFS
+  * debian/rules: More configure options
+    + --enable-offline
+    + --enable-advanced --enable-offline
+
+ -- Zhong Jianxin <azuwis@gmail.com>  Mon, 21 Apr 2014 16:31:44 +0800
+
 tcpcopy (0.9.7-1+netease1) unstable; urgency=low
 
   * New upstream release
